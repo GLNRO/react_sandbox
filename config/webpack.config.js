@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 const bourbon = require('node-bourbon').includePaths;
 const neat = require('bourbon-neat').includePaths;
 const root = process.env.PWD;
@@ -9,6 +10,9 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: './index.html',
     filename: 'index.html',
     inject: 'body'
+});
+const WebpackShellPluginConfig = new WebpackShellPlugin({
+  onBuildStart: ['bash scripts/fetch_styles.sh']
 });
 
 module.exports = {
@@ -32,5 +36,5 @@ module.exports = {
                 {test: /\.(ttf|eot|svg|png|woff(2)?)(\?[a-z0-9=&.]+)?$/, include: root + '/src',loader: 'file-loader'}
             ]
         },
-        plugins: [HTMLWebpackPluginConfig]
+        plugins: [HTMLWebpackPluginConfig, WebpackShellPluginConfig]
 };

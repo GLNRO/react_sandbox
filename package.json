@@ -45,6 +45,7 @@
     "sass-module-importer": "^1.2.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1"
+    "webpack-dev-server": "^1.16.1",
+    "webpack-shell-plugin": "^0.4.3"
   }
 }
