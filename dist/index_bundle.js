@@ -101,7 +101,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #FFA500; }\n\nh1 {\n  font-size: % 120;\n  color: #464351; }\n", ""]);
+	exports.push([module.id, ".testDiv {\n  height: 200px;\n  width: 200px;\n  background-color: #ffffff;\n  margin-left: 200px; }\n\nbody {\n  background-color: #FFA500; }\n\nh1 {\n  font-size: % 120;\n  color: #464351; }\n", ""]);
 
 	// exports
 
@@ -21823,7 +21823,7 @@
 
 	      return _react2.default.createElement(
 	        "div",
-	        null,
+	        { className: "testDiv" },
 	        _react2.default.createElement(
 	          "h1",
 	          { id: "welcome" },

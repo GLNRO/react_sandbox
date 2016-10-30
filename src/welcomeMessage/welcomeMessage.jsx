@@ -14,7 +14,7 @@ class WelcomeMessage extends Component {
 
 
     return(
-      <div>
+      <div className="testDiv">
         <h1 id="welcome">Welcome! {name} </h1>
       </div>
     )
