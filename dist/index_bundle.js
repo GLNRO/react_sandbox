@@ -82,8 +82,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?includePaths[]=/Users/laurengallinaro/Documents/ThoughtWorks/alpine/react_sandbox/react_sandbox/node_modules/bourbon/app/assets/stylesheets!./entry.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?includePaths[]=/Users/laurengallinaro/Documents/ThoughtWorks/alpine/react_sandbox/react_sandbox/node_modules/bourbon/app/assets/stylesheets!./entry.scss");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?includePaths[]=/Users/laurengallinaro/Documents/ThoughtWorks/alpine/react_sandbox/react_sandbox/node_modules/bourbon/app/assets/stylesheets,includePaths[]=/Users/laurengallinaro/Documents/ThoughtWorks/alpine/react_sandbox/react_sandbox/node_modules/bourbon-neat/app/assets/stylesheets!./entry.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?includePaths[]=/Users/laurengallinaro/Documents/ThoughtWorks/alpine/react_sandbox/react_sandbox/node_modules/bourbon/app/assets/stylesheets,includePaths[]=/Users/laurengallinaro/Documents/ThoughtWorks/alpine/react_sandbox/react_sandbox/node_modules/bourbon-neat/app/assets/stylesheets!./entry.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -101,7 +101,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #ffffff; }\n\nh1 {\n  font-size: % 120;\n  color: #464351; }\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #FFA500; }\n\nh1 {\n  font-size: % 120;\n  color: #464351; }\n", ""]);
 
 	// exports
 
@@ -21785,7 +21785,7 @@
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21797,22 +21797,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRedux = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"react-redux\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _thingStore = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../thingStore/thingStore.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _thingStore2 = _interopRequireDefault(_thingStore);
-
-	var _connectionFooter = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../environment/connectionFooter.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _connectionFooter2 = _interopRequireDefault(_connectionFooter);
-
-	var _asyncDataStore = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../shared/asyncDataStore\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _asyncDataStore2 = _interopRequireDefault(_asyncDataStore);
-
-	var _actions = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../shared/actions.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21820,8 +21804,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var store = (0, _asyncDataStore2.default)();
 
 	var WelcomeMessage = function (_Component) {
 	  _inherits(WelcomeMessage, _Component);
@@ -21833,25 +21815,21 @@
 	  }
 
 	  _createClass(WelcomeMessage, [{
-	    key: 'componentWillMount',
+	    key: "componentWillMount",
 	    value: function componentWillMount() {}
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
-	      var _ThingStore$getState = _thingStore2.default.getState();
-
-	      var name = _ThingStore$getState.name;
-
 
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        _react2.default.createElement(
-	          'h1',
-	          { id: 'welcome' },
-	          'Welcome! ',
+	          "h1",
+	          { id: "welcome" },
+	          "Welcome! ",
 	          name,
-	          ' '
+	          " "
 	        )
 	      );
 	    }
